@@ -1,23 +1,14 @@
 @import "variables";
 @import "globals";
-
-/* SCROLL BAR */
-/* ---------- */
-/* ---------- */
-/* ---------- */
-
-html::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-html::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
-    background: #ffa290;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+@import "mixins";
+@import "extends";
+@import "mqueries";
+@import "home";
+@import "productos";
+@import "about";
+@import "ubicacion";
+@import "contacto";
+@import "grid";
 
 /* ETIQUETAS */
 /* --------- */
@@ -64,47 +55,27 @@ header {
                 }
 
                 .nav-link1:hover {
-                    color: #ff53f4;
-                    transition: 0.3s ease-out;
+                    @include hover(#ff53f4);
                 }
 
                 .nav-link2:hover {
-                    color: #ff5cb1;
-                    transition: 0.3s ease-out;
+                    @include hover(#ff5cb1);
                 }
 
                 .nav-link3:hover {
-                    color: #ffa290;
-                    transition: 0.3s ease-out;
+                    @include hover(#ffa290);
                 }
 
                 .nav-link4:hover {
-                    color: #ffe097;
-                    transition: 0.3s ease-out;
+                    @include hover(#ffe097);
                 }
 
                 .nav-link5:hover {
-                    color: #ffffa9;
-                    transition: 0.3s ease-out;
+                    @include hover(#ffffa9);
                 }
             }
         }
     }
-}
-
-h1 {
-    font-size: 7rem;
-    text-align: center;
-    padding: 3rem 0 0 0;
-    text-shadow: 0.5rem 0.5rem 1.5rem #ffa390b2;
-}
-
-h2 {
-    font-size: 3.5rem;
-    text-align: center;
-    padding: 0 0 3rem 0;
-    letter-spacing: 1.5rem;
-    text-shadow: 0.5rem 0.5rem 1.5rem #ffa390b2;
 }
 
 footer {
@@ -129,28 +100,6 @@ footer {
 /* ------- */
 /* ------- */
 
-.grid-container {
-    display: grid;
-    grid-template-rows: 5% 90% 5%;
-    height: 100vh;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-}
-
-.grid-header {
-    grid-area: header;
-}
-
-.grid-main {
-    grid-area: main;
-}
-
-.grid-footer {
-    grid-area: footer;
-}
-
 .flex_row {
     display: flex;
     flex-direction: row;
@@ -160,136 +109,6 @@ footer {
     img {
         transition: all 0.3s;
     }
-}
-
-
-.titulos {
-    background-color: $boxcolorg;
-    display: grid;
-    align-items: center;
-    border-radius: 3rem;
-    box-shadow: $boxshadow1;
-    margin-top: 12%;
-    margin-left: 10%;
-    margin-right: 10%;
-
-    img {
-        margin: 10px auto;
-    }
-}
-
-.caja-carousel {
-    background-color: $boxcolorg;
-    margin: 10% 10%;
-    border-radius: 5rem;
-    box-shadow: $boxshadow1;
-    padding: 3rem 0;
-}
-
-.carousel-loco {
-    img {
-        border-radius: 3rem;
-        box-shadow: 0.1rem 0.1rem 0.5rem;
-        margin: 1rem auto 1rem;
-    }
-}
-
-
-.main-about {
-    margin-top: 5%;
-}
-
-.caja__about {
-    display: grid;
-    justify-items: center;
-    background-color: $boxcolorg;
-    margin: 5rem 10rem 5rem 10rem;
-    border-radius: 5rem;
-    box-shadow: $boxshadow1;
-
-    img {
-        margin-top: 4rem;
-    }
-
-    .titulo-about {
-        font-size: 4rem;
-        font-weight: bold;
-        margin-top: 2rem;
-    }
-
-    p {
-        font-size: 3rem;
-        text-align: center;
-        margin: 0 3rem 3rem 3rem;
-    }
-}
-
-.caja__ubicacion {
-    background-color: $boxcolorg;
-    margin: 10rem 10rem 5rem 10rem;
-    border-radius: 5rem;
-    box-shadow: $boxshadow1;
-    text-align: center;
-
-    p {
-        text-align: center;
-        font-size: 3rem;
-        padding: 4rem;
-    }
-
-    iframe {
-        width: 75%;
-        border-radius: 3rem;
-        margin-bottom: 8rem;
-        box-shadow: 1rem 1rem 1rem #00000065;
-    }
-}
-
-.caja__contacto {
-    background-color: $boxcolorg;
-    margin: 10% 10%;
-    padding: 3rem;
-    width: 80%;
-    height: 55%;
-    border-radius: 5rem;
-    box-shadow: $boxshadow1;
-
-    .imagen-contacto {
-        display: grid;
-        justify-content: center;
-    }
-
-    .contenedor__contacto {
-        display: flex;
-        justify-content: space-around;
-
-        .imagen__telefono {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                width: 10rem;
-                margin-bottom: 3rem;
-            }
-
-            p {
-                font-size: 2.5rem;
-                text-align: center;
-            }
-        }
-    }
-
-    .titulo__contacto {
-        font-size: 3rem;
-        text-align: center;
-        margin: 3rem 0;
-    }
-}
-
-.imagenes-nocarousel {
-    display: none;
 }
 
 /* HOVERS */
@@ -311,238 +130,5 @@ header {
                 transition: 0.9s ease-out;
             }
         }
-    }
-}
-
-/* MEDIA QUERIES */
-/* -------------- */
-/* -------------- */
-/* -------------- */
-
-@media (max-width: 1250px) {
-
-    /* Home */
-    .caja__bienvenida {
-        margin-top: 10%;
-
-        h1 {
-            font-size: 5rem;
-        }
-
-        h2 {
-            font-size: 3rem;
-        }
-    }
-
-    .imagenlogomain {
-        width: 250px;
-    }
-
-    /* Productos */
-    .caja-carousel {
-        margin-top: 20%;
-    }
-
-    .imagenes-nocarousel {
-        display: none;
-    }
-
-    /* About */
-    main p.parrafo-about {
-        font-size: 25px;
-    }
-
-    /* Contacto */
-}
-
-@media (max-width: 1000px) {
-    .imagenes-nocarousel {
-        display: none;
-    }
-
-    .caja__contacto {
-        margin: 10% auto;
-    }
-
-    .imagen-contacto img {
-        width: 200px;
-    }
-
-    p.titulo__contacto {
-        font-size: 2rem;
-    }
-
-    .imagen__telefono img {
-        width: 80px;
-    }
-}
-
-@media (max-width: 890px) {
-
-    /* Home */
-    .caja__bienvenida {
-        h1 {
-            font-size: 4rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-        }
-    }
-
-    .imagenlogomain {
-        width: 250px;
-    }
-
-    /* Productos */
-    .caja-carousel {
-        margin: 15% 2%;
-    }
-
-    .imagenes-nocarousel {
-        display: none;
-    }
-
-    /* About */
-    main p.parrafo-about {
-        font-size: 20px;
-    }
-
-    /* Ubicacion */
-    .caja__ubicacion {
-        margin: 10% 2%;
-
-        p {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        iframe {
-            width: 90%;
-        }
-    }
-}
-
-@media (max-width: 700px) {
-
-    /* Contacto */
-    p.titulo__contacto {
-        font-size: 1rem;
-        font-weight: bold;
-    }
-
-    .imagen__telefono img {
-        width: 30px;
-    }
-
-    .imagen__telefono p {
-        font-size: 14px;
-    }
-
-    /* Productos */
-    #carouselExampleDark {
-        display: none;
-    }
-
-    .caja-carousel {
-        margin: 10% 2%;
-    }
-
-    .imagenes-nocarousel img {
-        width: 100%;
-    }
-
-    .imagenes-nocarousel {
-        display: block;
-    }
-}
-
-@media (max-width: 440px) {
-
-    /* Home */
-    .caja__bienvenida {
-        margin-top: 40%;
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        h2 {
-            font-size: 1rem;
-            letter-spacing: 1px;
-        }
-    }
-
-    .imagenlogomain {
-        width: 180px;
-    }
-
-    /* Productos */
-    #carouselExampleDark {
-        display: none;
-    }
-
-    .caja-carousel {
-        margin: 20% 2%;
-    }
-
-    .imagenes-nocarousel img {
-        width: 100%;
-    }
-
-    /* About */
-    main p.titulo-about {
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    main p.parrafo-about {
-        font-size: 20px;
-    }
-
-    .caja__about {
-        margin: 5% 5%;
-
-        img {
-            width: 175px;
-        }
-    }
-
-    /* Ubicacion */
-    .caja__ubicacion {
-        margin: 10% 2%;
-
-        p {
-            font-size: 12px;
-            font-weight: bold;
-        }
-    }
-
-    /* Contacto */
-    .caja__contacto {
-        margin-top: 20%;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    p.titulo__contacto {
-        font-size: 1rem;
-        font-weight: bold;
-    }
-
-    .imagen__telefono {
-        img {
-            width: 30px;
-        }
-
-        p {
-            font-size: 14px;
-        }
-    }
-}
-
-@media (max-width: 300px) {
-    main div p.titulo-about {
-        font-size: 20px;
     }
 }

@@ -1,0 +1,19 @@
+.caja-carousel {
+    background-color: $boxcolorg;
+    margin: 10% 10%;
+    border-radius: 5rem;
+    box-shadow: $boxshadow1;
+    padding: 3rem 0;
+}
+
+.carousel-loco {
+    img {
+        border-radius: 3rem;
+        box-shadow: 0.1rem 0.1rem 0.5rem;
+        margin: 1rem auto 1rem;
+    }
+}
+
+.imagenes-nocarousel {
+    display: none;
+}

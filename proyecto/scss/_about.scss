@@ -1,0 +1,28 @@
+.main-about {
+    margin-top: 5%;
+}
+
+.caja__about {
+    display: grid;
+    justify-items: center;
+    background-color: $boxcolorg;
+    margin: 5rem 10rem 5rem 10rem;
+    border-radius: 5rem;
+    box-shadow: $boxshadow1;
+
+    img {
+        margin-top: 4rem;
+    }
+
+    .titulo-about {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+
+    p {
+        font-size: 3rem;
+        text-align: center;
+        margin: 0 3rem 3rem 3rem;
+    }
+}

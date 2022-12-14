@@ -1,0 +1,29 @@
+h1 {
+    font-size: 7rem;
+    text-align: center;
+    padding: 3rem 0 0 0;
+    text-shadow: 0.5rem 0.5rem 1.5rem #ffa390b2;
+}
+
+h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 0 0 3rem 0;
+    letter-spacing: 1.5rem;
+    text-shadow: 0.5rem 0.5rem 1.5rem #ffa390b2;
+}
+
+.titulos {
+    background-color: $boxcolorg;
+    display: grid;
+    align-items: center;
+    border-radius: 3rem;
+    box-shadow: $boxshadow1;
+    margin-top: 12%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    img {
+        margin: 10px auto;
+    }
+}

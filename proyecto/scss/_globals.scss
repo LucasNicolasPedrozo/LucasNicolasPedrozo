@@ -7,3 +7,22 @@
     font-size: 62.5%;
     /*10 pixeles*/
 }
+
+/* SCROLL BAR */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    @extend .scrollbar_thumb;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}

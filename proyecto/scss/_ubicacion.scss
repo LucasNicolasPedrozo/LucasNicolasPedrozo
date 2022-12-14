@@ -1,0 +1,20 @@
+.caja__ubicacion {
+    background-color: $boxcolorg;
+    margin: 10rem 10rem 5rem 10rem;
+    border-radius: 5rem;
+    box-shadow: $boxshadow1;
+    text-align: center;
+
+    p {
+        text-align: center;
+        font-size: 3rem;
+        padding: 4rem;
+    }
+
+    iframe {
+        width: 75%;
+        border-radius: 3rem;
+        margin-bottom: 8rem;
+        box-shadow: 1rem 1rem 1rem #00000065;
+    }
+}

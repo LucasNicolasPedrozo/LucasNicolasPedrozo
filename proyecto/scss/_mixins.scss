@@ -1,0 +1,4 @@
+@mixin hover ($color){
+    color: $color;
+    transition: 0.3s ease-out;
+}

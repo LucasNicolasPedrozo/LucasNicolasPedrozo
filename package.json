@@ -6,12 +6,14 @@
   "scripts": {
     "compile": "sass --watch proyecto/scss:proyecto/archivos-css"
   },
-  "keywords": ["heladeria, lucas, helados, moron, postres, postres helados, bombones, kg de helado, delivery, zona oeste, castelar, sin cargo"],
+  "keywords": [
+    "heladeria, helados, moron, postres, postres helados, bombones, delivery, zona oeste, castelar"
+  ],
   "author": "Lucas Pedrozo",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "node-sass": "^8.0.0",
-    "nodemon": "^2.0.20",
-    "bootstrap": "Utilizado para hacer un carousel y un navbar."
+    "nodemon": "^2.0.20"
   }
 }

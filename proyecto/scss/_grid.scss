@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 5% 90% 5%;
+    height: 100vh;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.grid-header {
+    grid-area: header;
+}
+
+.grid-main {
+    grid-area: main;
+}
+
+.grid-footer {
+    grid-area: footer;
+}
