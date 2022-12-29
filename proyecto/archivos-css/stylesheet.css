@@ -44,7 +44,7 @@ html {
   .caja-carousel {
     margin-top: 20%;
   }
-  .imagenes-nocarousel {
+  #imagenes-nocarousel {
     display: none;
   }
   /* About */
@@ -54,7 +54,7 @@ html {
   /* Contacto */
 }
 @media (max-width: 1000px) {
-  .imagenes-nocarousel {
+  #imagenes-nocarousel {
     display: none;
   }
   .caja__contacto {
@@ -85,7 +85,7 @@ html {
   .caja-carousel {
     margin: 15% 2%;
   }
-  .imagenes-nocarousel {
+  #imagenes-nocarousel {
     display: none;
   }
   /* About */
@@ -103,18 +103,22 @@ html {
   .caja__ubicacion iframe {
     width: 90%;
   }
+  .caja__contacto p.titulo__contacto {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .caja__contacto .contenedor__contacto div.imagen__telefono img {
+    width: 80px;
+  }
 }
 @media (max-width: 700px) {
   /* Contacto */
-  p.titulo__contacto {
+  .caja__contacto p.titulo__contacto {
     font-size: 1rem;
     font-weight: bold;
   }
   .imagen__telefono img {
     width: 30px;
-  }
-  .imagen__telefono p {
-    font-size: 14px;
   }
   /* Productos */
   #carouselExampleDark {
@@ -123,11 +127,17 @@ html {
   .caja-carousel {
     margin: 10% 2%;
   }
-  .imagenes-nocarousel img {
+  #imagenes-nocarousel img {
     width: 100%;
   }
-  .imagenes-nocarousel {
-    display: block;
+  #imagenes-nocarousel {
+    display: block !important;
+  }
+  .caja__contacto .contenedor__contacto div.imagen__telefono img {
+    width: 55px;
+  }
+  .caja__contacto .contenedor__contacto div.imagen__telefono p.numero__contacto {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 440px) {
@@ -152,7 +162,7 @@ html {
   .caja-carousel {
     margin: 20% 2%;
   }
-  .imagenes-nocarousel img {
+  #imagenes-nocarousel img {
     width: 100%;
   }
   /* About */
@@ -183,15 +193,15 @@ html {
     padding-left: 0;
     padding-right: 0;
   }
-  p.titulo__contacto {
+  .caja__contacto .titulo__contacto {
     font-size: 1rem;
     font-weight: bold;
   }
-  .imagen__telefono img {
-    width: 30px;
+  .caja__contacto .titulo__contacto .contenedor__contacto .imagen__telefono img {
+    width: 35px;
   }
-  .imagen__telefono p {
-    font-size: 14px;
+  .caja__contacto .titulo__contacto .contenedor__contacto .imagen__telefono .numero__contacto {
+    font-size: 1rem;
   }
 }
 @media (max-width: 300px) {
@@ -242,7 +252,7 @@ h2 {
   margin: 1rem auto 1rem;
 }
 
-.imagenes-nocarousel {
+#imagenes-nocarousel {
   display: none;
 }
 
@@ -318,7 +328,7 @@ h2 {
   width: 10rem;
   margin-bottom: 3rem;
 }
-.caja__contacto .contenedor__contacto .imagen__telefono p {
+.caja__contacto .contenedor__contacto .imagen__telefono .numero__contacto {
   font-size: 2.5rem;
   text-align: center;
 }
